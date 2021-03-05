@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>{% block title %} Electronics Commerce {% endblock %}</title>
     <style type="text/css">
-        .min-h-100 { min-height: 100%; }
+        .min-h-100 {
+            min-height: 100%;
+        }
     </style>
 </head>
+
 <body>
     <div class="row">
         <div id="header" class="bg-info col-sm-12 col-md-12 col-lg-12">
             <div class="row">
-                
-                 <div class="col-sm-12 col-md-12 col-lg-12">
+
+                <div class="col-sm-12 col-md-12 col-lg-12" style="background-color: #A282C9">
                     <h2>
                         {% block header %} Electronic Commerce {% endblock %}
-                     </h2>
-                 </div>
-                    
-             </div>
-         </div>
+                    </h2>
+                </div>
+
+            </div>
+        </div>
     </div>
     <div class="row">
-        <div id="sidebar" class="min-h-100 min-h-800 bg-light border col-sm-2col-md-2 col-lg-2">
+        <div id="sidebar" class="min-h-100 min-h-800 bg-dark border col-sm-2col-md-2 col-lg-2">
             {% block sidebar %}
-    
+
             {% endblock %}
-         </div>
+        </div>
         <div id="content" class="min-h-100 bg-light col-sm-10 col-md-10 col-lg-10">
-        {% block content %}{% endblock %}
+            {% block content %}{% endblock %}
         </div>
     </div>
     <div class="row">
@@ -40,5 +44,20 @@
             {% endblock %}
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon="{&quot;si&quot;:10,&quot;version&quot;:&quot;2021.2.0&quot;,&quot;rayId&quot;:&quot;62b124961c9706f1&quot;}"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
 </body>
+
 </html>
