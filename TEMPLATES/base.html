@@ -10,34 +10,31 @@
         .min-h-100 {
             min-height: 100%;
         }
+        a:hover{
+            text-decoration: none;
+        }
     </style>
 </head>
 
 <body>
-    <div class="row">
-        <div id="header" class="bg-info col-sm-12 col-md-12 col-lg-12">
-            <div class="row">
-
-                <div class="col-sm-12 col-md-12 col-lg-12" style="background-color: #A282C9">
-                    <h2>
+    <div class="row no-gutters">
+        <div id="header" class="col-md-12 " style="background-color: #A282C9">
+                        <h2>
                         {% block header %} Electronic Commerce {% endblock %}
-                    </h2>
-                </div>
-
-            </div>
+                        </h2>
         </div>
     </div>
-    <div class="row">
-        <div id="sidebar" class="min-h-100  bg-dark  col-sm-2 col-md-2 col-lg-2">
+    <div class="row no-gutters">
+        <div id="sidebar" class="min-h-100  bg-dark   col-md-2">
             {% block sidebar %}
 
             {% endblock %}
         </div>
-        <div id="content" class="min-h-100 bg-light col-sm-10 col-md-10 col-lg-10">
+        <div id="content" class="min-h-100 bg-light  col-md-10">
             {% block content %}{% endblock %}
         </div>
     </div>
-    <div class="row">
+    <div class="row no-gutters">
         <div id="footer" class="col-md-12">
             {% block footer %}
 
