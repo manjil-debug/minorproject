@@ -90,11 +90,9 @@ Fill-Up Form
     <label for="colFormLabel" class="col-sm-2 col-form-label">Venu</label>
     <div class="col-sm-3">
       <select id="inputState" class="form-control" name="venu">
-        <option selected>Soltee Hotel</option>
-        <option>Sangrilla</option>
-        <option>Yak and Yeti</option>
-        <option>Annapurna</option>
-        <option>Dwarika</option>
+          {%for results in venu%}
+            <option>{{results.name}}</option>
+          {% endfor %}
       </select>
     </div>
   </div>
