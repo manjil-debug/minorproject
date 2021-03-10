@@ -20,18 +20,18 @@ Fill-Up Form
           class="dropdown-toggle collapsed">Events</a>
         <ul class="list-unstyled collapse" id="homeSubmenu">
           <li>
-            <a class="text-muted" href="/fillupform">Marriage</a>
+            <a class="text-muted" href="#">Marriage</a>
           </li>
           <li>
-            <a class="text-muted" href="/fillupform">Corperate Event</a>
+            <a class="text-muted" href="#">Corperate Event</a>
           </li>
           <li>
-            <a class="text-muted" href="/fillupform">Bartabanda</a>
+            <a class="text-muted" href="#">Bartabanda</a>
           </li>
         </ul>
       </li>
       <li>
-        <a class="text-muted" href="#">About</a>
+        <a class="text-muted" href="/fillupform">Book Your Event</a>
       </li>
       <li>
         <a class="text-muted" href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
@@ -62,45 +62,46 @@ Fill-Up Form
 {% block content %}
 <form method='POST' action='' style="padding:20px;">
   {% csrf_token %}
-  <div class="form-group row no-gutters" style="padding-top:20px; padding-bottom:20px;">
+  <div class="form-group row no-gutters">
     <label for="example-date-input" class="col-2 col-form-label">Date of event</label>
     <div class="col-3">
-      <input class="form-control" type="date" value="2020-08-19" id="example-date-input" Name="date_input">
+      <input class="form-control" type="date" value="" id="example-date-input" Name="date_input">
     </div>
   </div>
   <div class="form-group row no-gutters">
-    <label for="colFormLabel" class="col-sm-2 col-form-label">Name</label>
+    <label for="name" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-3">
-      <input type="email" class="form-control" id="colFormLabel" placeholder="Name" Name="name">
+      <input type="email" class="form-control" id="name" placeholder="Name" Name="name">
     </div>
   </div>
   <div class="form-group row no-gutters">
-    <label for="colFormLabel" class="col-sm-2 col-form-label">Phone Number</label>
+    <label for="ph_number" class="col-sm-2 col-form-label">Phone Number</label>
     <div class="col-sm-3">
-      <input type="email" class="form-control" id="colFormLabel" placeholder="Phone Number" name="ph_number">
+      <input type="email" class="form-control" id="ph_number" placeholder="Phone Number" name="ph_number">
     </div>
   </div>
   <div class="form-group row no-gutters">
-    <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+    <label for="email" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-3">
-      <input type="email" class="form-control" id="colFormLabel" placeholder="Email" name="email">
+      <input type="email" class="form-control" id="email" placeholder="Email" name="email">
     </div>
   </div>
   <div class="form-group row no-gutters">
-    <label for="colFormLabel" class="col-sm-2 col-form-label">Venu</label>
+    <label for="venue" class="col-sm-2 col-form-label">Venue</label>
     <div class="col-sm-3">
-      <select id="inputState" class="form-control" name="venu">
+      <select id="venue" class="form-control" name="venue">
+        <option default value="null">--Select-Venue--</option>
           {%for results in venu%}
-            <option>{{results.name}}</option>
+            <option value="{{results.name}}">{{results.name}}</option>
           {% endfor %}
       </select>
     </div>
   </div>
   <div class="form-group row no-gutters">
-    <label for="colFormLabel" class="col-sm-2 col-form-label">Event-type</label>
+    <label for="event" class="col-sm-2 col-form-label">Event-type</label>
     <div class="col-sm-3">
-      <select id="inputState" class="form-control" name="type">
-        <option selected>Corperate-Event</option>
+      <select id="event" class="form-control" name="type">
+        <option selected>Cooperate-Event</option>
         <option>Marriage-Event</option>
         <option>Bartabanda-Event</option>
         <option>Birthday-Event</option>
@@ -108,9 +109,9 @@ Fill-Up Form
     </div>
   </div>
   <div class="form-group row no-gutters">
-    <label for="colFormLabel" class="col-sm-2 col-form-label">Personal Requests</label>
+    <label for="p_request" class="col-sm-2 col-form-label">Personal Requests</label>
     <div class="col-sm-3">
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="requests"></textarea>
+      <textarea class="form-control" id="p_request" rows="3" name="requests"></textarea>
     </div>
   </div>
   <button type="Submit" class="btn btn-success">Submit</button>
