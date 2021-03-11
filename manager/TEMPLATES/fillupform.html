@@ -60,6 +60,18 @@ Fill-Up Form
 </nav>
 {% endblock sidebar %}
 {% block content %}
+<div class="form-group" id="msg">
+  {% if messages %}
+    <ul class="messages list-unstyled">
+      {% for msg in messages %}
+        <li>
+          <div class="alert alert-success"> {{ msg }}</div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+
 <form method='POST' action='' style="padding:20px;">
   {% csrf_token %}
   <div class="form-group row no-gutters">
@@ -71,13 +83,13 @@ Fill-Up Form
   <div class="form-group row no-gutters">
     <label for="name" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-3">
-      <input type="email" class="form-control" id="name" placeholder="Name" Name="name">
+      <input type="text" class="form-control" id="name" placeholder="Name" Name="name">
     </div>
   </div>
   <div class="form-group row no-gutters">
     <label for="ph_number" class="col-sm-2 col-form-label">Phone Number</label>
     <div class="col-sm-3">
-      <input type="email" class="form-control" id="ph_number" placeholder="Phone Number" name="ph_number">
+      <input type="text" class="form-control" id="ph_number" placeholder="Phone Number" name="ph_number">
     </div>
   </div>
   <div class="form-group row no-gutters">
@@ -90,7 +102,7 @@ Fill-Up Form
     <label for="venue" class="col-sm-2 col-form-label">Venue</label>
     <div class="col-sm-3">
       <select id="venue" class="form-control" name="venue">
-        <option default value="null">--Select-Venue--</option>
+        <option selected value="null">--Select-Venue--</option>
           {%for results in venu%}
             <option value="{{results.name}}">{{results.name}}</option>
           {% endfor %}
@@ -101,10 +113,11 @@ Fill-Up Form
     <label for="event" class="col-sm-2 col-form-label">Event-type</label>
     <div class="col-sm-3">
       <select id="event" class="form-control" name="type">
-        <option selected>Cooperate-Event</option>
-        <option>Marriage-Event</option>
-        <option>Bartabanda-Event</option>
-        <option>Birthday-Event</option>
+        <option selected value="null">--Select-Event-type--</option>
+        <option value="Cooperate-Event">Cooperate-Event</option>
+        <option value="Marriage-Event">Marriage-Event</option>
+        <option value="Bartabanda-Event">Bartabanda-Event</option>
+        <option value="Birthday-Event">Birthday-Event</option>
       </select>
     </div>
   </div>
@@ -174,3 +187,4 @@ Fill-Up Form
   </div>
 </footer>
 {% endblock footer %}
+
