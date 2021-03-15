@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
-from .models import venu,customer_requests
+from .models import venu,customer_requests,customer_register
 from django.contrib import messages
 # Create your views here.
 
@@ -33,6 +33,31 @@ def fillupform(request):
             messages.error(request, 'Your Booking was not-Successful please try again later')
 
     results = venu.objects.all()
-    return render(request,'fillupform.html', {"venu":results})
+    return render(request, 'fillupform.html', {"venu":results})
 
 
+def user_login(request):
+    return render(request,'user_login.html')
+
+
+def sign_up(request):
+    if request.method == "POST":
+        data = request.POST
+        f_name = data['first_name']
+        l_name = data['last_name']
+        email = data['email']
+        ph_number = data['ph_number']
+        password = data['password']
+
+        obj = customer_register.objects.create(f_name=f_name,
+                                               l_name=l_name,
+                                               email=email,
+                                               ph_number=ph_number,
+                                               password=password)
+        if obj:
+            messages.success(request, 'Your request was Successful, You will receive and email shortly')
+        else:
+            messages.error(request, 'Failed to register please try again later')
+    else:
+        messages.error(request, 'Failed to register please try again later')
+    return render(request, 'sign_up.html')

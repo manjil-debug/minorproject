@@ -23,4 +23,16 @@ class customer_requests(models.Model):
         return self.name
 
 
+class customer_register(models.Model):
+    f_name = models.CharField(max_length=200)
+    l_name = models.CharField(max_length=200)
+    email = models.EmailField()
+    ph_number = models.IntegerField()
+    password = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.f_name
+
+
+
 

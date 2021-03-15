@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% block title %}
+Fill-Up Form
+{% endblock title %}
+{% block header %}
+<div class="row no-gutters">
+    <div class="col-md-6"></div>
+    <div class="col-md-4">
+        <a class="text-dark" href="/"><p>Eventure</p></a>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+{% endblock header %}
+{% block sidebar %}
+<nav id="sidebar" class="">
+    <div class="p-4 pt-5">
+        <ul class="list-unstyled components mb-5">
+            <li class="active">
+                <a class="text-muted" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
+                   class="dropdown-toggle collapsed">Events</a>
+                <ul class="list-unstyled collapse" id="homeSubmenu">
+                    <li>
+                        <a class="text-muted" href="#">Marriage</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Corperate Event</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Bartabanda</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="text-muted" href="/fillupform">Book Your Event</a>
+            </li>
+            <li>
+                <a class="text-muted" href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                   class="dropdown-toggle collapsed">Pages</a>
+                <ul class="list-unstyled collapse" id="pageSubmenu">
+                    <li>
+                        <a class="text-muted" href="#">Page 1</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Page 2</a>
+                    </li>
+                    <li>
+                        <a class="text-muted" href="#">Page 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="text-muted" href="#">Portfolio</a>
+            </li>
+            <li>
+                <a class="text-muted" href="#">Contact</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+{% endblock sidebar %}
+{% block content %}
+<div class="form-group" id="msg">
+    {% if messages %}
+    <ul class="messages list-unstyled">
+        {% for msg in messages %}
+        <li>
+            <div class="alert alert-success"> {{ msg }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+
+<form class="form-signin" style="height:600px; padding-top:60px;">
+    {% csrf_token %}
+    <div class="main">
+        <div class="row">
+            <div class="col-md 2"></div>
+            <div class="col-md 6">
+                <h1 class="h3 mb-3 font-weight-normal">Please Log-in</h1>
+                <input type="text" id="u_name" class="form-control" placeholder="User Name" required="" autofocus="">
+                <br>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                <br>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+                <a class="btn btn-lg btn-danger btn-block" href="/sign_up">Sign up</a>
+            </div>
+            <div class="col-md 2"></div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
+{% block footer %}
+<footer class="container py-5">
+    <div class="row">
+        <div class="col-12 col-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+            </svg>
+            <small class="d-block mb-3 text-muted">© 2017-2018</small>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Cool stuff</a></li>
+                <li><a class="text-muted" href="#">Random feature</a></li>
+                <li><a class="text-muted" href="#">Team feature</a></li>
+                <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                <li><a class="text-muted" href="#">Another one</a></li>
+                <li><a class="text-muted" href="#">Last time</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Resource</a></li>
+                <li><a class="text-muted" href="#">Resource name</a></li>
+                <li><a class="text-muted" href="#">Another resource</a></li>
+                <li><a class="text-muted" href="#">Final resource</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Corporate</a></li>
+                <li><a class="text-muted" href="#">Bartabandha</a></li>
+                <li><a class="text-muted" href="#">Marriage</a></li>
+                <li><a class="text-muted" href="#">Product Launch</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-muted" href="#">Team</a></li>
+                <li><a class="text-muted" href="#">Locations</a></li>
+                <li><a class="text-muted" href="#">Privacy</a></li>
+                <li><a class="text-muted" href="#">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+{% endblock footer %}
+

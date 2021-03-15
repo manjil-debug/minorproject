@@ -13,49 +13,42 @@
         a:hover{
             text-decoration: none;
         }
+
     </style>
 </head>
 
 <body>
-    <div class="row no-gutters">
-        <div id="header" class="col-md-12 " style="background-color: #A282C9">
+    <div class="row no-gutters fixed-top" style="background-color: #5DD0FB;">
+        <div id="header" class="col-md-12 ">
                         <h2>
                         {% block header %} Electronic Commerce {% endblock %}
                         </h2>
         </div>
     </div>
-    <div class="row no-gutters">
-        <div id="sidebar" class="min-h-100  bg-dark   col-md-2">
-            {% block sidebar %}
+    <div class="main" style="margin-top:62.17px;">
+        <div class="row no-gutters">
+            <div id="sidebar" class=" bg-dark   col-md-2">
+                {% block sidebar %}
 
-            {% endblock %}
+                {% endblock %}
+            </div>
+            <div id="content" class=" bg-light  col-md-10">
+
+                {% block content %}
+
+                {% endblock %}
+            </div>
         </div>
-        <div id="content" class="min-h-100 bg-light  col-md-10">
+        <div class="row no-gutters">
+            <div id="footer" class="col-md-12">
+                {% block footer %}
 
-            {% block content %}{% endblock %}
+                {% endblock %}
+            </div>
         </div>
     </div>
-    <div class="row no-gutters">
-        <div id="footer" class="col-md-12">
-            {% block footer %}
 
-            {% endblock %}
-        </div>
-    </div>
-    <div class="row no-gutters">
-        <div id="message" class="col-md-12">
-            {% if messages %}
-            {% for message in messages %}
-            {{ message }}
-            {% endfor %}
-            {% endif %}
-        </div>
-    </div>
-    {% if messages %}
-    {% for message in messages %}
-    {{ message }}
-    {% endfor %}
-    {% endif %}
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -76,6 +69,11 @@
               $('#msg').remove();
             }
           }, 1500)
+
+           $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
     </script>
 </body>
 
