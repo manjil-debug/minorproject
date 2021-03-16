@@ -4,11 +4,18 @@ Sign_up Form
 {% endblock title %}
 {% block header %}
 <div class="row no-gutters">
-    <div class="col-md-6"></div>
-    <div class="col-md-4">
-        <a class="text-dark" href="/"><p>Eventure</p></a>
+    <div class="col-md-5">
+
     </div>
-    <div class="col-md-2"></div>
+    <div class="col-md-5">
+        <a class="text-dark" style="padding-left: 2px;" href="/" title="Eventure">
+            <img src="http://oureventure.com/wp-content/uploads/2016/06/Eventure-Logo-2016-300x79.png" alt="Eventure"
+                height="70" width="200" class="logo-light">
+        </a>
+    </div>
+    <div class="col-md-2">
+        <a class="btn btn-md btn-primary" href="/user_login" role="button" style="margin-top: 20px;">Sign up today</a>
+    </div>
 </div>
 {% endblock header %}
 {% block sidebar %}
@@ -16,8 +23,8 @@ Sign_up Form
     <div class="p-4 pt-5">
         <ul class="list-unstyled components mb-5">
             <li class="active">
-                <a class="text-muted" href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
-                   class="dropdown-toggle collapsed">Events</a>
+                <a href="#homeSubmenu" class="text-muted" data-toggle="collapse" aria-expanded="false"
+                    class="dropdown-toggle collapsed">Events</a>
                 <ul class="list-unstyled collapse" id="homeSubmenu">
                     <li>
                         <a class="text-muted" href="#">Marriage</a>
@@ -34,25 +41,10 @@ Sign_up Form
                 <a class="text-muted" href="/fillupform">Book Your Event</a>
             </li>
             <li>
-                <a class="text-muted" href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
-                   class="dropdown-toggle collapsed">Pages</a>
-                <ul class="list-unstyled collapse" id="pageSubmenu">
-                    <li>
-                        <a class="text-muted" href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a class="text-muted" href="#">Page 3</a>
-                    </li>
-                </ul>
+                <a class="text-muted" href="/about">About Us</a>
             </li>
             <li>
-                <a class="text-muted" href="#">Portfolio</a>
-            </li>
-            <li>
-                <a class="text-muted" href="#">Contact</a>
+                <a class="text-muted" href="/contact">Contact Us</a>
             </li>
         </ul>
 
@@ -73,42 +65,48 @@ Sign_up Form
 </div>
 
 
-    <div class="main">
-        <div class="row">
-            <div class="col-md 2"></div>
-            <div class="col-md 6">
-                <form style="height:600px; padding-top:30px;" method="POST" action=''>
-                    {% csrf_token %}
+<div class="main">
+    <div class="row">
+        <div class="col-md 2"></div>
+        <div class="col-md 6">
+            <form style="height:600px; padding-top:30px;" method="POST" action=''>
+                {% csrf_token %}
                 <h2>Sign Up</h2>
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-md 6"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
-                        <div class="col-md 6"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+                        <div class="col-md 6"><input type="text" class="form-control" name="first_name"
+                                placeholder="First Name" required="required"></div>
+                        <div class="col-md 6"><input type="text" class="form-control" name="last_name"
+                                placeholder="Last Name" required="required"></div>
                     </div>
                 </div>
                 <div class="form-group">
                     <input type="email" class="form-control" name="email" placeholder="Email" required="required">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="ph_number" placeholder="Phone Number" required="required">
+                    <input type="text" class="form-control" name="ph_number" placeholder="Phone Number"
+                        required="required">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                    <input type="password" class="form-control" name="password" placeholder="Password"
+                        required="required">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+                    <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password"
+                        required="required">
                 </div>
                 <div class="form-group">
-                    <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+                    <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a
+                            href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success btn-lg btn-block">Sign Up Now</button>
                 </div>
-                </form>
-            </div>
-            <div class="col-md 2"></div>
+            </form>
         </div>
+        <div class="col-md 2"></div>
     </div>
+</div>
 
 {% endblock content %}
 {% block footer %}
@@ -116,7 +114,8 @@ Sign_up Form
     <div class="row">
         <div class="col-12 col-md">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2">
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="d-block mb-2">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
                 <line x1="9.69" y1="8" x2="21.17" y2="8"></line>

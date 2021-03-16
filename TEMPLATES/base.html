@@ -5,27 +5,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>{% block title %} Electronics Commerce {% endblock %}</title>
+    <title>{% block title %} {% endblock %}</title>
     <style type="text/css">
         .min-h-100 {
             min-height: 100%;
         }
-        a:hover{
+
+        a:hover {
             text-decoration: none;
         }
-
     </style>
 </head>
 
 <body>
     <div class="row no-gutters fixed-top" style="background-color: #5DD0FB;">
         <div id="header" class="col-md-12 ">
-                        <h2>
-                        {% block header %} Electronic Commerce {% endblock %}
-                        </h2>
+            <h2>
+                {% block header %} Electronic Commerce {% endblock %}
+            </h2>
         </div>
     </div>
-    <div class="main" style="margin-top:62.17px;">
+    <div class="main" style="margin-top:78px;">
         <div class="row no-gutters">
             <div id="sidebar" class=" bg-dark   col-md-2">
                 {% block sidebar %}
@@ -64,13 +64,13 @@
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="../../assets/js/vendor/holder.min.js"></script>
     <script>
-          setTimeout(function(){
-            if ($('#msg').length > 0){
-              $('#msg').remove();
+        setTimeout(function () {
+            if ($('#msg').length > 0) {
+                $('#msg').remove();
             }
-          }, 1500)
+        }, 1500)
 
-           $(".custom-file-input").on("change", function() {
+        $(".custom-file-input").on("change", function () {
             var fileName = $(this).val().split("\\").pop();
             $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
         });

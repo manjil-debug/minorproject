@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% block title %}
+Fill-Up Form
+{% endblock title %}
+{% block header %}
+<div class="row no-gutters">
+   <div class="col-md-5">
+
+   </div>
+   <div class="col-md-5">
+      <a class="text-dark" style="padding-left: 2px;" href="/" title="Eventure">
+         <img src="http://oureventure.com/wp-content/uploads/2016/06/Eventure-Logo-2016-300x79.png" alt="Eventure"
+            height="70" width="200" class="logo-light">
+      </a>
+   </div>
+   <div class="col-md-2">
+      <a class="btn btn-md btn-primary" href="/user_login" role="button" style="margin-top: 20px;">Sign up today</a>
+   </div>
+</div>
+{% endblock header %}
+{% block sidebar %}
+<nav id="sidebar" class="">
+   <div class="p-4 pt-5">
+      <ul class="list-unstyled components mb-5">
+         <li class="active">
+            <a href="#homeSubmenu" class="text-muted" data-toggle="collapse" aria-expanded="false"
+               class="dropdown-toggle collapsed">Events</a>
+            <ul class="list-unstyled collapse" id="homeSubmenu">
+               <li>
+                  <a class="text-muted" href="#">Marriage</a>
+               </li>
+               <li>
+                  <a class="text-muted" href="#">Corperate Event</a>
+               </li>
+               <li>
+                  <a class="text-muted" href="#">Bartabanda</a>
+               </li>
+            </ul>
+         </li>
+         <li>
+            <a class="text-muted" href="/fillupform">Book Your Event</a>
+         </li>
+         <li>
+            <a class="text-muted" href="/about">About Us</a>
+         </li>
+         <li>
+            <a class="text-muted" href="/contact">Contact Us</a>
+         </li>
+      </ul>
+
+   </div>
+</nav>
+{% endblock sidebar %}
+{% block content %}
+<div class="jumbotron jumbotron-sm">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12 col-lg-12">
+            <h1 class="h1">
+               Contact us <small>Feel free to contact us</small></h1>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="container">
+   <div class="row">
+      <div class="col-md-8">
+         <div class="well well-sm">
+            <form>
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="form-group">
+                        <label for="name">
+                           Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name"
+                           required="required" />
+                     </div>
+                     <div class="form-group">
+                        <label for="address">
+                           Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="Enter address"
+                           required="required" />
+                     </div>
+                     <div class="form-group">
+                        <label for="email">
+                           Email Address</label>
+                        <div class="input-group">
+                           <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                           </span>
+                           <input type="email" class="form-control" id="email" placeholder="Enter email"
+                              required="required" />
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="subject">
+                           Subject</label>
+                        <select id="subject" name="subject" class="form-control" required="required">
+                           <option value="na" selected="">Choose One:</option>
+                           <option value="service">General Customer Service</option>
+                           <option value="request">Requests</option>
+                           <option value="suggestions">Suggestions</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="form-group">
+                        <label for="name">
+                           Message</label>
+                        <textarea name="message" id="message" class="form-control" rows="9" cols="25"
+                           required="required" placeholder="Message"></textarea>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                        Send Message</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+      <div class="col-md-4">
+         <form>
+            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+            <address>
+               <strong>Twitter, Inc.</strong><br>
+               APEX COLLEGE, NEW BANESHWOR, KATHMANDU (NEPAL)<br>
+               <em title="Phone">
+                  Phone:</em>
+               (+977)-9841233610
+            </address>
+            <address>
+               <strong>Mail Us To:</strong><br>
+               <a href="mailto:#"> EVENTURE.PLANNER@GMAIL.COM</a>
+            </address>
+         </form>
+      </div>
+   </div>
+</div>
+{% endblock content %}
+
+{% block footer %}
+<footer class="container py-5">
+   <div class="row">
+      <div class="col-6 col-md">
+         <h5>Packages</h5>
+         <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Photo-Video_DJ</a></li>
+            <li><a class="text-muted" href="#">Vehicle Rental</a></li>
+            <li><a class="text-muted" href="#">Bridal wears</a></li>
+            <li><a class="text-muted" href="#">Cakes-Decorations</a></li>
+         </ul>
+      </div>
+      <div class="col-5 col-md">
+         <h5>Features</h5>
+         <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Budget Manager</a></li>
+            <li><a class="text-muted" href="#">Catering Management</a></li>
+            <li><a class="text-muted" href="#">Product-Launch Anchors</a></li>
+            <li><a class="text-muted" href="#">Parking and Securtiy</a></li>
+         </ul>
+      </div>
+      <div class="col-6 col-md">
+         <h5>Resources</h5>
+         <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Corporate</a></li>
+            <li><a class="text-muted" href="#">Bartabandha</a></li>
+            <li><a class="text-muted" href="#">Marriage</a></li>
+            <li><a class="text-muted" href="#">Product Launch</a></li>
+         </ul>
+      </div>
+      <div class="col-6 col-md">
+         <h5>About</h5>
+         <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Team</a></li>
+            <li><a class="text-muted" href="#">Locations</a></li>
+            <li><a class="text-muted" href="#">Privacy</a></li>
+            <li><a class="text-muted" href="#">Terms</a></li>
+         </ul>
+      </div>
+   </div>
+</footer>
+{% endblock footer %}
