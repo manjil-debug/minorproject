@@ -71,3 +71,25 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact_us.html')
+
+
+def soltee(request):
+    return render(request, 'venues/soltee.html')
+
+
+def sangrila(request):
+    return render(request, 'venues/sangrila.html')
+
+
+def annapurna(request):
+    return render(request, 'venues/annapurna.html')
+
+
+def himalayan(request):
+    return render(request, 'venues/himalayan.html')
+
+
+def dhulikhel(request):
+    return render(request, 'venues/dhulikhel.html')
+
+
