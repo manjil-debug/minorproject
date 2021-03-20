@@ -18,31 +18,52 @@ Fill-Up Form
 {% endblock header %}
 {% block sidebar %}
 <nav id="sidebar" class="">
-  <div class="p-4 pt-5">
-    <ul class="list-unstyled components mb-5">
-      <li class="active">
+  <div class="p-3 pt-4">
+    <ul class="list-group list-group-flush components mb-5">
+      <li class="list-group-item bg-dark">
         <a href="#homeSubmenu" class="text-muted" data-toggle="collapse" aria-expanded="false"
-          class="dropdown-toggle collapsed">Events</a>
-        <ul class="list-unstyled collapse" id="homeSubmenu">
-          <li>
+           class="dropdown-toggle collapsed">Events</a>
+        <ul class="list-group list-group-flush collapse" id="homeSubmenu" style="margin-left:10px;">
+          <li class="list-group-item bg-dark">
             <a class="text-muted" href="#">Marriage</a>
           </li>
-          <li>
+          <li class="list-group-item bg-dark">
             <a class="text-muted" href="#">Corperate Event</a>
           </li>
-          <li>
+          <li class="list-group-item bg-dark">
             <a class="text-muted" href="#">Bartabanda</a>
           </li>
         </ul>
       </li>
-      <li>
+      <li class="list-group-item bg-dark">
         <a class="text-muted" href="/fillupform">Book Your Event</a>
       </li>
-      <li>
+      <li class="list-group-item bg-dark">
         <a class="text-muted" href="/about">About Us</a>
       </li>
-      <li>
+      <li class="list-group-item bg-dark">
         <a class="text-muted" href="/contact">Contact Us</a>
+      </li>
+      <li class="list-group-item bg-dark">
+        <a href="#venueSubmenu" class="text-muted" data-toggle="collapse" aria-expanded="false"
+           class="dropdown-toggle collapsed">Venues</a>
+        <ul class="list-group list-group-flush collapse " id="venueSubmenu" style="margin-left:10px;">
+          <li class="list-group-item bg-dark">
+            <a class="text-muted" href="venues/soltee">Soltee</a>
+          </li>
+          <li class="list-group-item bg-dark">
+            <a class="text-muted" href="venues/sangrila">Sangrilaa</a>
+          </li>
+          <li class="list-group-item bg-dark">
+            <a class="text-muted" href="venues/himalayan">Himalayan</a>
+          </li>
+          <li class="list-group-item bg-dark">
+            <a class="text-muted" href="venues/dhulikhel">Dhulikhel</a>
+          </li>
+          <li class="list-group-item bg-dark">
+            <a class="text-muted" href="venues/annapurna">Annapurna</a>
+          </li>
+        </ul>
       </li>
     </ul>
 
