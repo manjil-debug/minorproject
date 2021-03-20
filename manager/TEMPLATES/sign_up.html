@@ -73,8 +73,9 @@ Sign_up Form
 </nav>
 {% endblock sidebar %}
 {% block content %}
+
+{% if messages %}
 <div class="form-group" id="msg">
-    {% if messages %}
     <ul class="messages list-unstyled">
         {% for msg in messages %}
         <li>
@@ -82,9 +83,8 @@ Sign_up Form
         </li>
         {% endfor %}
     </ul>
-    {% endif %}
 </div>
-
+{% endif %}
 
 <div class="main">
     <div class="row">

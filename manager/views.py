@@ -30,8 +30,7 @@ def fillupform(request):
         if obj:
             messages.success(request, 'Your Booking was Successful')
         else:
-            messages.error(
-                request, 'Your Booking was not-Successful please try again later')
+            messages.error(request, 'Your Booking was not-Successful please try again later')
 
     results = venu.objects.all()
     return render(request, 'fillupform.html', {"venu": results})

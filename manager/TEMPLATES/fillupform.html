@@ -71,8 +71,8 @@ Fill-Up Form
 </nav>
 {% endblock sidebar %}
 {% block content %}
+{% if messages %}
 <div class="form-group" id="msg">
-  {% if messages %}
   <ul class="messages list-unstyled">
     {% for msg in messages %}
     <li>
@@ -80,9 +80,8 @@ Fill-Up Form
     </li>
     {% endfor %}
   </ul>
-  {% endif %}
 </div>
-
+{% endif %}
 <form method='POST' action='' style="padding:20px;">
   {% csrf_token %}
   <div class="form-group row no-gutters">
