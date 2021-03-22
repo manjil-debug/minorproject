@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import venu, customer_requests, customer_register
 from django.contrib import messages
+from django.core.mail import send_mail
 # Create your views here.
 
 
@@ -55,8 +56,7 @@ def sign_up(request):
                                                ph_number=ph_number,
                                                password=password)
         if obj:
-            messages.success(
-                request, 'Your request was Successful, You will receive and email shortly')
+            messages.success(request, 'Your request was Successful, You will receive and email shortly')
         else:
             messages.error(
                 request, 'Failed to register please try again later')
@@ -69,6 +69,22 @@ def about(request):
 
 
 def contact(request):
+    if request.method == "POST":
+        msge_name = request.POST['name']
+        msge_email = request.POST['email']
+        msge_message = request.POST['message']
+
+        obj = send_mail(
+                msge_name,
+                msge_message,
+                msge_email,
+                ['eventure.322@gmail.com'],
+                )
+        if obj:
+            messages.success(request, 'Your message has been sent')
+        else:
+            messages.error(request, 'Failed to register please try again later')
+
     return render(request, 'contact_us.html')
 
 
