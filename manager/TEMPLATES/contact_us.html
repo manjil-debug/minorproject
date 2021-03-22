@@ -93,12 +93,12 @@ Fill-Up Form
          </div>
       </div>
    </div>
-   <div class="container">
+   <div class="container" style="padding-top:100px;">
       <div class="row">
 
          <!--Grid column-->
          <div class="col-md-9 mb-md-0 mb-5">
-            <form style="padding-top:100px;" method="POST" action="">
+            <form  method="POST" action="">
                {% csrf_token %}
                <!--Grid row-->
                <div class="row">
@@ -140,9 +140,21 @@ Fill-Up Form
                <!--Grid row-->
                <button type="submit" class="btn btn-info">Submit</button>
             </form>
+         </div>
+         <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+               <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                  <p>Kathmandu, Nepal</p>
+               </li>
 
+               <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                  <p>+ 9841233610</p>
+               </li>
 
-
+               <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                  <p>eventure.322@gmail.com</p>
+               </li>
+            </ul>
          </div>
    </div>
 </div>
