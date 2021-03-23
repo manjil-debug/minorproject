@@ -4,9 +4,9 @@ from .models import venu,customer_requests,customer_register
 
 
 class venu_admin(admin.ModelAdmin):
-    list_display = ["name","booking_price"]
+    list_display = ["name","booking_price","nonveg_pricing","veg_pricing","h_drinks"]
     search_fields = ["name"]
-    list_filter = ["booking_price"]
+    list_filter = ["booking_price","nonveg_pricing","veg_pricing","h_drinks"]
 
     class Meta:
         model = venu

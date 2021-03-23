@@ -75,7 +75,7 @@ def contact(request):
         msge_message = request.POST['message']
 
         obj = send_mail(
-                msge_name,
+                'message from ' + msge_name + ' using email ' + msge_email,
                 msge_message,
                 msge_email,
                 ['eventure.322@gmail.com'],
@@ -89,22 +89,27 @@ def contact(request):
 
 
 def soltee(request):
-    return render(request, 'venues/soltee.html')
+    results = venu.objects.get(name='Soltee')
+    return render(request, 'venues/soltee.html',{"price": results})
 
 
 def sangrila(request):
-    return render(request, 'venues/sangrila.html')
+    results = venu.objects.get(name='Sangrilaa')
+    return render(request, 'venues/sangrila.html',{"price": results})
 
 
 def annapurna(request):
-    return render(request, 'venues/annapurna.html')
+    results = venu.objects.get(name='Annapurna')
+    return render(request, 'venues/annapurna.html',{"price": results})
 
 
 def himalayan(request):
-    return render(request, 'venues/himalayan.html')
+    results = venu.objects.get(name='himalayan')
+    return render(request, 'venues/himalayan.html',{"price": results})
 
 
 def dhulikhel(request):
-    return render(request, 'venues/dhulikhel.html')
+    results = venu.objects.get(name='Dhulikhel Resort')
+    return render(request, 'venues/dhulikhel.html',{"price": results})
 
 
