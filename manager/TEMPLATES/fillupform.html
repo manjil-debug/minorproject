@@ -72,15 +72,11 @@ Fill-Up Form
 {% endblock sidebar %}
 {% block content %}
 {% if messages %}
-<div class="form-group" id="msg">
-  <ul class="messages list-unstyled">
     {% for msg in messages %}
-    <li>
-      <div class="alert alert-success"> {{ msg }}</div>
-    </li>
+      <div class="alert {{ msg.tags }} m-2" id="msg" role="alert">
+        {{ msg }}
+      </div>
     {% endfor %}
-  </ul>
-</div>
 {% endif %}
 <form method='POST' action='' style="padding:20px;">
   {% csrf_token %}

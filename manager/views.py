@@ -21,17 +21,14 @@ def fillupform(request):
         event_type = data['type']
         per_request = data['requests']
 
-        obj = customer_requests.objects.create(date=date,
-                                               name=name,
-                                               ph_number=ph_number,
-                                               email=email,
-                                               venue=venue,
-                                               event_type=event_type,
-                                               per_request=per_request)
-        if obj:
-            messages.success(request, 'Your Booking was Successful')
+        if customer_requests.objects.filter(date=date, venue=venue).exists():
+            messages.error(request, 'The Date is already booked for the venue please select a different date or venue')
         else:
-            messages.error(request, 'Your Booking was not-Successful please try again later')
+            obj = customer_requests.objects.create(date=date, name=name, ph_number=ph_number, email=email, venue=venue, event_type=event_type, per_request=per_request)
+            if obj:
+                messages.success(request, 'Your Booking was Successful')
+            else:
+                messages.error(request, 'Your Booking was not-Successful please try again later')
 
     results = venu.objects.all()
     return render(request, 'fillupform.html', {"venu": results})
@@ -81,7 +78,7 @@ def contact(request):
                 ['eventure.322@gmail.com'],
                 )
         if obj:
-            messages.success(request, 'Your message has been sent')
+            return render(request, 'contact_us.html', {'sender': msge_name})
         else:
             messages.error(request, 'Failed to register please try again later')
 
