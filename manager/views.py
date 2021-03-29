@@ -64,6 +64,7 @@ def user_login(request):
 def logout(request):
     try:
         del request.session['u_name']
+        messages.warning(request,'You have logged out')
     except:
         pass
     return redirect('/')

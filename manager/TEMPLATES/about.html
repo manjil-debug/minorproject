@@ -14,7 +14,11 @@ Fill-Up Form
       </a>
    </div>
    <div class="col-md-2">
-      <a class="btn btn-sm" href="/sign_up" role="button" style="margin-top: 10px; background-color: #BE273A; color:#f7f7f7;">Sign up today</a>
+      {% if 'u_name' in request.session %}
+      <a class="btn btn-sm" href="/logout" role="button" style="margin-top: 10px; background-color: #BE273A; color:#f7f7f7;">Logout</a>
+      {% else %}
+      <a class="btn btn-sm" href="/sign_up" role="button" style="margin-top: 10px; background-color: #BE273A; color:#f7f7f7;">Sign-up</a>
+      {% endif %}
    </div>
 </div>
 {% endblock header %}
