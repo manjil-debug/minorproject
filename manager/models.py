@@ -16,7 +16,7 @@ class venu(models.Model):
 class customer_requests(models.Model):
     date = models.DateField()
     name = models.CharField(max_length=200)
-    ph_number = models.IntegerField(max_length=10)
+    ph_number = models.IntegerField()
     email = models.EmailField()
     venue = models.CharField(max_length=100)
     event_type = models.CharField(max_length=100)
@@ -29,6 +29,7 @@ class customer_requests(models.Model):
 class customer_register(models.Model):
     f_name = models.CharField(max_length=200)
     l_name = models.CharField(max_length=200)
+    u_name = models.CharField(max_length=200)
     email = models.EmailField()
     ph_number = models.IntegerField()
     password = models.CharField(max_length=200)

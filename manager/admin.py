@@ -22,8 +22,8 @@ class request_admin(admin.ModelAdmin):
 
 
 class register_admin(admin.ModelAdmin):
-    list_display = ["f_name","l_name","email","ph_number","password"]
-    search_fields = ["f_name","l_name","email"]
+    list_display = ["f_name","l_name","u_name","email","ph_number","password"]
+    search_fields = ["f_name","l_name","email","u_name"]
 
     class Meta:
         model = customer_register

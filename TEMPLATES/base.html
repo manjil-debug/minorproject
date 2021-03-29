@@ -15,20 +15,26 @@
         a:hover {
             text-decoration: none;
         }
+        h1,h2,h3,h4{
+            color:#BE273A;
+        }
+        body{
+            font-family:'Poppins', sans-serif !important;
+        }
     </style>
 </head>
 
 <body>
-    <div class="row no-gutters fixed-top" style="background-color: #5DD0FB;">
-        <div id="header" class="col-md-12 ">
+    <div class="row no-gutters fixed-top shadow-sm" style="background-color: #f7f7f7 ;">
+        <div id="header" class="col-md-12">
             <h2>
                 {% block header %} Electronic Commerce {% endblock %}
             </h2>
         </div>
     </div>
-    <div class="main" style="margin-top:78px;">
-        <div class="row no-gutters">
-            <div id="sidebar" class=" bg-dark   col-md-2">
+    <div class="main" style="margin-top:58px;">
+        <div class="row no-gutters" style="min-height:550px;">
+            <div id="sidebar" class=" bg-light   col-md-2">
                 {% block sidebar %}
 
                 {% endblock %}
@@ -40,7 +46,7 @@
                 {% endblock %}
             </div>
         </div>
-        <div class="row no-gutters">
+        <div class="row no-gutters" style="background-color: #BE273A;">
             <div id="footer" class="col-md-12">
                 {% block footer %}
 
@@ -69,7 +75,7 @@
             if ($('#msg').length > 0) {
                 $('#msg').remove();
             }
-        }, 1500)
+        }, 2000)
 
         $(".custom-file-input").on("change", function () {
             var fileName = $(this).val().split("\\").pop();
