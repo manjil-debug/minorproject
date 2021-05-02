@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-Fill-Up Form
+About Us
 {% endblock title %}
 {% block header %}
 <div class="row no-gutters">
@@ -15,9 +15,11 @@ Fill-Up Form
    </div>
    <div class="col-md-2">
       {% if 'u_name' in request.session %}
-      <a class="btn btn-sm" href="/logout" role="button" style="margin-top: 10px; background-color: #BE273A; color:#f7f7f7;">Logout</a>
+      <a class="btn btn-sm" href="/logout" role="button"
+         style="margin-top: 10px; background-color: #BE273A; color:#f7f7f7;">Logout</a>
       {% else %}
-      <a class="btn btn-sm" href="/sign_up" role="button" style="margin-top: 10px; background-color: #BE273A; color:#f7f7f7;">Sign-up</a>
+      <a class="btn btn-sm" href="/sign_up" role="button"
+         style="margin-top: 10px; background-color: #BE273A; color:#f7f7f7;">Sign-up</a>
       {% endif %}
    </div>
 </div>
@@ -27,32 +29,32 @@ Fill-Up Form
    <div class="p-3 pt-4">
       <ul class="list-group list-group-flush">
          <li class="list-group-item bg-light">
-            <a class="text-muted" href="/fillupform">Book Your Event</a>
+            <a class="text-unmuted text-dark" href="/fillupform">Book Your Event</a>
          </li>
          <li class="list-group-item bg-light">
-            <a class="text-muted" href="/about">About Us</a>
+            <a class="text-unmuted text-dark" href="/about">About Us</a>
          </li>
          <li class="list-group-item bg-light">
-            <a class="text-muted" href="/contact">Contact Us</a>
+            <a class="text-unmuted text-dark" href="/contact">Contact Us</a>
          </li>
          <li class="list-group-item bg-light">
-            <a href="#venueSubmenu" class="text-muted" data-toggle="collapse" aria-expanded="false"
+            <a href="#venueSubmenu" class="text-unmuted text-dark" data-toggle="collapse" aria-expanded="false"
                class="dropdown-toggle collapsed">Venues</a>
             <ul class="list-group list-group-flush collapse " id="venueSubmenu" style="margin-left:10px;">
                <li class="list-group-item bg-light">
-                  <a class="text-muted" href="venues/soltee">Soltee</a>
+                  <a class="text-unmuted text-dark" href="venues/soltee">Soltee</a>
                </li>
                <li class="list-group-item bg-light">
-                  <a class="text-muted" href="venues/sangrila">Sangrilaa</a>
+                  <a class="text-unmuted text-dark" href="venues/sangrila">Sangrilaa</a>
                </li>
                <li class="list-group-item bg-light">
-                  <a class="text-muted" href="venues/himalayan">Himalayan</a>
+                  <a class="text-unmuted text-dark" href="venues/himalayan">Himalayan</a>
                </li>
                <li class="list-group-item bg-light">
-                  <a class="text-muted" href="venues/dhulikhel">Dhulikhel</a>
+                  <a class="text-unmuted text-dark" href="venues/dhulikhel">Dhulikhel</a>
                </li>
                <li class="list-group-item bg-light">
-                  <a class="text-muted" href="venues/annapurna">Annapurna</a>
+                  <a class="text-unmuted text-dark" href="venues/annapurna">Annapurna</a>
                </li>
             </ul>
          </li>
@@ -62,276 +64,121 @@ Fill-Up Form
 </nav>
 {% endblock sidebar %}
 {% block content %}
-<h1>About Us</h1>
 <div class="entry">
-   <div class="text-editor">
-      <div>
-         <div style="text-align: left;">
-            &nbsp;
-         </div>
-         <div style="text-align: left;">
-            We specialize in the creation of exceptional and customized wedding events, we design, plan and manage
-            every project from conception to
-            execution. We bring dreams to reality!
-         </div>
-         <div style="text-align: left;">
-            &nbsp;
-         </div>
-      </div>
-      <div style="text-align: left;">
-         <div>
-            The name ‘Shanqh’ is inspired from an Indian instrument that is played on commencing any
-            auspicious occasion, and we carry the motto of ‘Building dreams to reality’. Eventure excels in
-            Wedding Planning and has covered more than 5+ Wedding Planning projects in Kathmandu and
-            out of valley.
-         </div>
-         <p>
-            &nbsp;
-         </p>
-         <div>
-            &nbsp;
-         </div>
-      </div>
-      <div style="text-align: left;">
-         <div>
-            Our group of professionals understand that breakthrough ideas are only as good as the
-            discipline supporting them. At Eventure we believe that there is a sublime connection
-            between the mastery of management and the creation of creative ideas, most importantly, the intangible
-            –&nbsp;element of surprise to make every Wedding a different and a seamless experience.
-         </div>
-         <p>
-            &nbsp;
-         </p>
-         <div>
-            &nbsp;
-         </div>
-         <p>
-            &nbsp;
-         </p>
-         <h5>
-            <em>
-               Welcome to the art of luxury wedding management!
-            </em>
-         </h5>
-         <p>
-            &nbsp;
-         </p>
-         <div>
-            &nbsp;
-         </div>
-      </div>
-      <div style="text-align: left;">
-         <div>
-            Shanqh Luxury Events, is among the top banners of India in Wedding Planning industry solely due to the
-            brains of Manvir Singh and Siddhant Paul. Their consistent effort in driving the venture towards
-            excellence upholding the Core Values at Shanqh.
-         </div>
-         <div>
-            &nbsp;
-         </div>
-      </div>
-      <div class="m_5683727715188183244gmail-_1mf m_5683727715188183244gmail-_1mj" style="text-align: left;">
-         &nbsp;
-      </div>
-      <div class="m_5683727715188183244gmail-_1mf m_5683727715188183244gmail-_1mj" style="text-align: left;">
-         &nbsp;
-      </div>
-      <h3 style="text-align: left;">
-         Our Core Team
-      </h3>
-      <div>
-         &nbsp;
-      </div>
-      <h4 style="text-align: left;">
-         <a href="http://shanqh.com/wp-content/uploads/2017/02/manvir_singh.png">
-            <img class="wp-image-334 size-full alignleft"
-                 src="http://shanqh.com/wp-content/uploads/2017/02/manvir_singh.png" alt="manvir singh" width="100"
-                 height="100"
-                 srcset="http://shanqh.com/wp-content/uploads/2017/02/manvir_singh.png 100w, http://shanqh.com/wp-content/uploads/2017/02/manvir_singh-50x50.png 50w"
-                 sizes="(max-width: 100px) 100vw, 100px">
-         </a>
-         Manvir Singh | Founder and Managing Director
-      </h4>
-      <p style="text-align: left;">
-         “<em>
-         <strong>
-            We believe excellence is not an act but a habit, deep into the event industry, I realized that
-            there was a great need to
-            &nbsp;
-            organize the unorganized market.”
-         </strong>
-      </em>
-      </p>
-      <p style="text-align: left;">Shanqh works on
-         &nbsp;
-         core principles of
-         &nbsp;
-         delicacy and customer satisfaction which is its core USP. Our unique set of designers and management crew
-         make impossible things turn into i’m possible.
-         &nbsp;
-         Our motto at work is
-         &nbsp;
-         imagine. create. design. celebrate.
-      </p>
-      <p style="text-align: left;">
-         &nbsp;
-      </p>
-      <p style="text-align: left;">
-         &nbsp;
-      </p>
-      <h4 style="text-align: left;">
-         <a href="http://shanqh.com/wp-content/uploads/2017/02/siddhant.png">
-            <img class="wp-image-335 alignleft" src="http://shanqh.com/wp-content/uploads/2017/02/siddhant.png" alt=""
-                 width="100" height="100"
-                 srcset="http://shanqh.com/wp-content/uploads/2017/02/siddhant.png 100w, http://shanqh.com/wp-content/uploads/2017/02/siddhant-50x50.png 50w"
-                 sizes="(max-width: 100px) 100vw, 100px" />
-         </a>
-         Siddhant Paul | Founder and Creative Director
-      </h4>
-      <p style="text-align: left;">
-         “<strong>
-         <em>Being an established space designer, I thought there was a major
-            need to innovate and re-invent the existing event culture.”
-         </em>
-      </strong>
-      </p>
-      <p style="text-align: left;">
-         At Shanqh, we aim at creating spaces that are distinctively unique with
-         dedication of every individual on the project. We believe execution must be at par with the design, and
-         who better could create a perfect execution than the designers themselves.
-         &nbsp;
-         We design, execute and
-         produce unimaginable concepts
-         &nbsp;
-         and bring consumers dreams to reality.
-      </p>
-      <h4 style="text-align: left;">
-         &nbsp;
-      </h4>
-      <h4 style="text-align: left;">
-         &nbsp;
-      </h4>
-      <h4 style="text-align: left;">
-         Naman Chawla | Operations Head
-      </h4>
-      <p style="text-align: left;">A superior leader is a person who can bring ordinary people together to achieve
-         extraordinary results. What is required is to complete the task on time, we guarantee the best operations
-         turnaround time at Shanqh.
-      </p>
-      <p style="text-align: left;">
-         &nbsp;
-      </p>
-      <h4 style="text-align: left;">
-         Santokh Singh | Operations Manager
-      </h4>
-      <p style="text-align: left;">
-         I believe the most important thing is Delivery and at Shanqh. We take every
-         step to cover up all eventualities of a crisis to make sure what is received at the client end is
-         flawless.
-      </p>
-      <p style="text-align: left;">
-         &nbsp;
-      </p>
-      <p style="text-align: left;">
-         <strong>
-            Shanqh Wedding Décor
-         </strong>
-         provides a state of art décor with
-         inclusive spirit that builds traditional and modern themes with equal
-         &nbsp;
-         ease. Shanqh has successfully
-         deployed more than 150 unique and distinguished wedding décor sets. The design innovators at Shanqh are
-         constantly awaiting to bring alive the most attractive décor arrangement.
-      </p>
-      <p style="text-align: left;">
-         <strong>
-            Shanqh Event Planning
-         </strong>
-         &nbsp;
-         makes a complex
-         &nbsp;
-         art appear
-         seamless with its unique
-         &nbsp;
-         set of experts for co-ordination, managing, planning, deployment
-         and
-         &nbsp;
-         end-to-end delivery. This is spread over an unlimited sphere of services of
-         &nbsp;
-         Budgeting,
-         Venue Booking, Décor Management, Catering Management, Invitations, Guest
-         Management
-         &nbsp;
-         and
-         &nbsp;
-         Entertainment among others. Our esteemed clients rely on our event planning
-         services for the smooth flow of their auspicious event.
-      </p>
-      <p style="text-align: left;">
-         – Choreographers can teach beginners to toddlers how to jive to the beats.
-      </p>
-      <p style="text-align: left;">
-         – Lights and sounds can make or break a place; it’s just a matter of changing
-         colors, intensities, hues and textures.
-      </p>
-      <p style="text-align: left;">
-         – The food is a charm, just the matter of grabbing the best bite.
-      </p>
-      <p style="text-align: left;">
-         – Celebrities, anchors, singers and dance groups all can entertain you at your event.
-      </p>
-      <p style="text-align: left;">
-         Furthermore, which one or how much is good enough? That’s what we do. we
-         choose. we create. and we build the most amazing event, so you can be boastful of.
-      </p>
-      <div style="text-align: left;">
-         <h5>
-            &nbsp;
-         </h5>
-         <h5>
-            Why work with us?
-         </h5>
-         <div>
-            &nbsp;
-         </div>
-      </div>
-      <div style="text-align: left;">
-         <div>
-            We always have edge over our competitors, our noted USP’s –
-         </div>
-         <div>
-            &nbsp;
-         </div>
-      </div>
-      <div style="text-align: left;">
-         <div>
-            – Provide the best services at most reasonable cost
-         </div>
-         <div>
-            – Above all, we understand the client’s taste and then provide a plethora of options to choose from
-         </div>
-         <div>
-            – We have a dedicated team of individuals to perform a particular task
-         </div>
-         <div>
-            – Possess the highest customer satisfaction rates in the industry
-         </div>
-         <div>
-            – Extremely well connected in the industry which helps our event run very smoothly
-         </div>
-         <div>
-            – Our Design tells a story
-         </div>
-      </div>
+   <div class="text-editor col-md-12"
+        style="padding: 35px; color: rgb(0, 0, 0); text-align: center; font-size: 16px; margin: auto; width: auto; background-color: #ffffff!important;">
+   <h1 style=" text-align: center; color: #BE273A; display: block;">About Us</h1>
+
+   <div style="text-align: left;">
+      We specialize in the creation of exceptional and customized wedding events, we design, plan and manage every
+      project from conception to execution. We bring dreams to reality! Eventure Luxury Events, is among the top
+      banners of Kathmandu in Event Planning industry. Our consistent effort in driving the venture towards
+      excellence upholding the Core Values at Eventure.
+      <br>
+      Eventure carries the motto of ‘Building dreams to reality’. We excel in Wedding Planning, Corporate Events,
+      Birthdays, Bachelorette Parties as well and have covered more than 5+ Wedding Planning projects in Kathmandu
+      and out of valley.
    </div>
 </div>
+
+<div style="padding: 20px; display: block;">
+   <h3 style="text-align: center;">
+      Our Team
+   </h3>
+   &nbsp;
+   <div class="container">
+     <img src="static/about.png" alt="about image" height="270" width="100%"/>
+   </div>
 </div>
+<br>
+<div style="padding: 15px; background-color: #ffffff!important; text-align: justify;">
+   <p style="padding-left: 15px; padding-right: 15px;">
+      <strong>
+         Eventure
+      </strong>
+      makes a complex art appear seamless with its unique set of experts for co-ordination, managing, planning,
+      deployment and end-to-end delivery.
+      This is spread over an unlimited sphere of services of Budgeting, Venue Booking, Décor Management, Catering
+      Management, Invitations, Guest Management and Entertainment among others.
+      <br><br>
+      Furthermore, which one or how much is good enough? That’s what we do, we choose, we create and we build the
+      most amazing event, so you can be boastful of.
+   </p>
 </div>
+
+<div style="display: block; padding: 15px;">
+
+   <section class="s_features pb80 o_colored_level pt0" data-snippet="s_features" data-name="Features">
+      <div class="container">
+         <div class="row">
+            <div class="pt32 pb32 text-center o_colored_level col-lg-3">
+               <img
+                       src="static/econimical.png"
+                       width="110" height="108">
+               <h3>
+                  <b>
+                     <h3 style="font-size: 20px; font-weight: bold;">Economical</h3>
+                  </b>
+               </h3>
+               <p style="font-size: 16px;" class="text-600">
+                  We provide the best services at most reasonable cost.
+               </p>
+            </div>
+            <div class="pt32 pb32 text-center o_colored_level col-lg-3">
+               <img
+                       src="static/team.png"
+                       width="110" height="108">
+               <h3>
+                  <b>
+                     <h3 style="font-size: 20px; font-weight: bold;">Team</h3>
+                  </b>
+               </h3>
+               <p style="font-size: 16px;" class="text-600">
+                     <span style="font-size: 16px;">We have a dedicated team of individuals to perform a particular
+                        task.</span>
+               </p>
+            </div>
+            <div class="pt32 pb32 text-center o_colored_level col-lg-3">
+               <img
+                       src="static/options.png"
+                       width="110" height="108">
+               <h3>
+                  <b>
+                     <h3 style="font-size: 20px; font-weight: bold;">Many Options</h3>
+                  </b>
+               </h3>
+               <p style="font-size: 16px;" class="text-600">
+                     <span style="font-size: 16px;">We provide a large set of options to choose from according the type
+                        of event.</span>
+               </p>
+            </div>
+            <div class="pt32 pb32 text-center o_colored_level col-lg-3">
+               <img
+                       src="static/network.png"
+                       width="110" height="108">
+               <h3>
+                  <b>
+                     <h3 style="font-size: 20px; font-weight: bold;">Inter-Connected</h3>
+                  </b>
+               </h3>
+               <p style="font-size: 16px;" class="text-600">
+                     <span style="font-size: 16px;">We provide a large set of options to choose from according the type
+                        of event.</span>
+               </p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+
+</div>
+
+</div>
+<br>
 {% endblock content %}
 
 {% block footer %}
-<footer id="bottom" data-anchor="true" data-name="Footer" class="o_footer"
-        style="height: 100; padding: 10px;">
+<footer id="bottom" data-anchor="true" data-name="Footer" class="o_footer" style="height: 100; padding: 10px;">
    <div id="footer" class="oe_structure oe_structure_solo">
       <section class="s_text_block pb16 pt16" data-snippet="s_text_block" data-name="Text"
                style="position: relative; box-sizing: border-box; display: inline;">

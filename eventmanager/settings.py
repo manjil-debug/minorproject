@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
 
@@ -120,6 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS =(
+    os.path.join(BASE_DIR,'static'),
+)
 
 
 # EMAIL SETTINGS
@@ -140,3 +143,5 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True

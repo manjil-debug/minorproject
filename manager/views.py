@@ -9,7 +9,6 @@ from django.core.mail import send_mail
 def index(request):
     if request.session.has_key('u_name'):
         u_name = request.session['u_name']
-        messages.success(request, 'You are logged-in '+u_name)
         return render(request, 'index.html')
     else:
         return render(request, 'index.html')
@@ -54,6 +53,7 @@ def user_login(request):
             if customer_register.objects.filter(u_name=u_name, password=password).exists():
                 obj = request.session['u_name'] = u_name
                 if obj:
+                    messages.success(request, 'You are logged-in '+u_name)
                     return redirect('/')
             else:
                 messages.error(request, 'login failed')
