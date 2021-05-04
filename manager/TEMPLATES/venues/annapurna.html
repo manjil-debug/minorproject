@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block title %}Eventure{% endblock title %}
 {% block header %}
+{% load static %}
 <div class="row no-gutters">
     <div class="col-md-5">
 
@@ -54,6 +55,7 @@
 </nav>
 {% endblock sidebar %} {% block content %}
 
+
 <div class="row no-gutters">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -63,7 +65,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item">
-                <img class="first-slide" src="https://cf.bstatic.com/images/hotel/max1280x900/117/117652776.jpg"
+                <img class="first-slide" src="{% static 'images/annapurna1.jpg' %}"
                      alt="First slide" style="width:100%; height:500px;">
                 <div class="container">
                     <div class="carousel-caption text-left">
@@ -75,7 +77,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="second-slide" src="https://cf.bstatic.com/images/hotel/max1280x900/117/117652776.jpg"
+                <img class="second-slide" src="{% static 'images/a.jpg' %}"
                      alt="Second slide" style="width:100%; height:500px;">
                 <div class="container">
                     <div class="carousel-caption">
@@ -87,7 +89,7 @@
                 </div>
             </div>
             <div class="carousel-item active">
-                <img class="third-slide" src="https://cf.bstatic.com/images/hotel/max1280x900/117/117652776.jpg"
+                <img class="third-slide" src="{% static 'images/annapurna3.jpg' %}"
                      alt="Third slide" style="width:100%; height:500px;">
                 <div class="container">
                     <div class="carousel-caption text-right">
