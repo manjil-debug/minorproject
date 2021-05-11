@@ -1,5 +1,6 @@
 {% extends 'base.html' %} {% block title %}Eventure{% endblock title %}
 {% block header %}
+{% load static %}
 <div class="row no-gutters">
     <div class="col-md-5">
 
@@ -11,7 +12,11 @@
         </a>
     </div>
     <div class="col-md-2">
+        {% if 'u_name' in request.session %}
+        <a class="btn btn-sm" href="/logout" role="button" style="margin-top: 10px; background-color: #BE273A; color:#f7f7f7;">Logout</a>
+        {% else %}
         <a class="btn btn-sm" href="/user_login" role="button" style="margin-top: 10px; background-color: #BE273A; color:#f7f7f7;">Login</a>
+        {% endif %}
     </div>
 </div>
 {% endblock header %} {% block sidebar %}
@@ -19,7 +24,7 @@
     <div class="p-3 pt-4">
         <ul class="list-group list-group-flush components mb-5">
             <li class="list-group-item bg-light">
-                <a class="text-muted" href="/fillupform">Book Your Event</a>
+                <a class="text-muted" href="/">Home</a>
             </li>
             <li class="list-group-item bg-light">
                 <a class="text-muted" href="/about">About Us</a>
@@ -54,6 +59,7 @@
 </nav>
 {% endblock sidebar %} {% block content %}
 
+
 <div class="row no-gutters">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -63,40 +69,25 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item">
-                <img class="first-slide" src="https://cf.bstatic.com/images/hotel/max1280x900/117/117652776.jpg"
+                <img class="first-slide" src="../static/annapurna1.jpg"
                      alt="First slide" style="width:100%; height:500px;">
                 <div class="container">
                     <div class="carousel-caption text-left">
-                        <h1>Example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                            metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="/user_login" role="button">Sign up today</a></p>
+                        <h1>Front View- Hotel Annapurna</h1>
+
+                        <p><a class="btn btn-lg" style="margin-top: 10px; background-color: #BE273A; color:#f7f7f7;" href="/fillupform" role="button">Book Your Event</a></p>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="second-slide" src="https://cf.bstatic.com/images/hotel/max1280x900/117/117652776.jpg"
+                <img class="second-slide" src="../static/a.jpg"
                      alt="Second slide" style="width:100%; height:500px;">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                            metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                    </div>
-                </div>
+
             </div>
             <div class="carousel-item active">
-                <img class="third-slide" src="https://cf.bstatic.com/images/hotel/max1280x900/117/117652776.jpg"
+                <img class="third-slide" src="../static/annapurna3.jpg"
                      alt="Third slide" style="width:100%; height:500px;">
-                <div class="container">
-                    <div class="carousel-caption text-right">
-                        <h1>One more for good measure.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                            metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                    </div>
-                </div>
+
             </div>
         </div>
         <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -157,7 +148,7 @@
                 celebrate an auspicious occasion or hold a professional business conference in any one of our recommended venues
             </div>
         </div>
-
+        <hr class="featurette-divider">
     </div>
 </div>
 {% endblock %}

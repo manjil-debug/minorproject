@@ -13,7 +13,7 @@ class venu_admin(admin.ModelAdmin):
 
 
 class request_admin(admin.ModelAdmin):
-    list_display = ["date","name","ph_number","email","venue","event_type"]
+    list_display = ["date","name","ph_number","email","venue","event_type","status"]
     search_fields = ["name","venue","date","event_type"]
     list_filter = ["date","name","venue","event_type"]
 
