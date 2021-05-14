@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from .models import venu, customer_requests, customer_register
 from django.contrib import messages
 from django.core.mail import send_mail
-
+import datetime
 # Create your views here.
 
 
@@ -29,8 +29,11 @@ def fillupform(request):
             event_type = data['type']
             per_request = data['requests']
             num = len(str(ph_number))
-
-
+            year, month, day = date.split("-",3)
+            y=int(year)
+            m=int(month)
+            d=int(day)
+            givendate=datetime.date(y, m, d)
             if num >= 10:
                 ph_validate = 1
             else:
@@ -44,7 +47,13 @@ def fillupform(request):
             else:
                 date_validate = 1
 
-            if ph_validate == 1 and date_validate == 1:
+            if givendate < datetime.date.today():
+                messages.error(request,'The date is from the past, please select a date for the future')
+                past = 0
+            else:
+                past = 1
+
+            if ph_validate == 1 and date_validate == 1 and past == 1:
                 obj = customer_requests.objects.create(date=date,
                                                        name=name,
                                                        ph_number=ph_number,
